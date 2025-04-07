@@ -1,0 +1,52 @@
+# Translation of Plugins - Make Connector - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Make Connector - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-03-25 11:13:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Make Connector - Stable (latest release)\n"
+
+#. Plugin Name of the plugin
+msgid "Make Connector"
+msgstr "Make Connector"
+
+#: settings/events.php:11
+msgid "Wrong nonce"
+msgstr "Nonce incorrecto"
+
+#. Author URI of the plugin
+msgid "https://www.make.com/en?utm_source=wordpress&utm_medium=partner&utm_campaign=wordpress-partner-make"
+msgstr "https://www.make.com/en?utm_source=wordpress&utm_medium=partner&utm_campaign=wordpress-partner-make"
+
+#. Author of the plugin
+msgid "Celonis s.r.o."
+msgstr "Celonis s.r.o."
+
+#: settings/object-types/class-term-meta.php:17
+msgid "Select terms metadata to include in REST API response"
+msgstr "Selecciona los metadatos para los términos de la taxonomía que se incluirán en la respuesta de la API REST"
+
+#: settings/object-types/class-user-meta.php:21
+msgid "Select users metadata to include in REST API response"
+msgstr "Selecciona los metadatos de usuario que se incluirán en la respuesta de la API REST"
+
+#: settings/object-types/class-post-meta.php:21
+msgid "Select posts metadata to include in REST API response"
+msgstr "Selecciona los metadatos de entradas que se incluirán en la respuesta de la API REST"
+
+#: settings/object-types/custom-taxonomy.php:13
+msgid "Select taxonomies to enable or disable in REST API response."
+msgstr "Activa o desactiva las taxonomías que se mostrarán en la API REST"
+
+#: settings/object-types/class-comments-meta.php:21
+msgid "Select comments metadata to include in REST API response"
+msgstr "Selecciona los metadatos de comentarios que se incluirán en la respuesta de la API REST"
+
+#. Description of the plugin
+msgid "Safely connect your site to make.com, work with custom meta fields through the REST API."
+msgstr "Conecta de manera segura tu sitio con make.com y trabaja con los metadatos personalizados a través de la API REST"

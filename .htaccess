@@ -1,0 +1,86 @@
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+#If you serve pages from behind a proxy you may want to change 'RewriteCond %{HTTPS} on' to something more sensible
+AddDefaultCharset UTF-8
+RewriteCond %{REQUEST_URI} !^.*[^/]$
+RewriteCond %{REQUEST_URI} !^.//.$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{HTTP:Cookie} !^.(comment_author_|wordpress_logged_in|wp-postpass_).$
+RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{HTTPS} on
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html.gz -f
+RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html.gz" [L]
+
+RewriteCond %{REQUEST_URI} !^.*[^/]$
+RewriteCond %{REQUEST_URI} !^.//.$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{HTTP:Cookie} !^.(comment_author_|wordpress_logged_in|wp-postpass_).$
+RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{HTTPS} !on
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html.gz -f
+RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html.gz" [L]
+
+RewriteCond %{REQUEST_URI} !^.*[^/]$
+RewriteCond %{REQUEST_URI} !^.//.$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{HTTP:Cookie} !^.(comment_author_|wordpress_logged_in|wp-postpass_).$
+RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTPS} on
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html -f
+RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html" [L]
+
+RewriteCond %{REQUEST_URI} !^.*[^/]$
+RewriteCond %{REQUEST_URI} !^.//.$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} ^$
+RewriteCond %{HTTP:Cookie} !^.(comment_author_|wordpress_logged_in|wp-postpass_).$
+RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTPS} !on
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html -f
+RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html" [L]
+</IfModule>
+
+#Begin Really Simple Security
+<IfModule mod_rewrite.c>
+RewriteEngine off
+RewriteCond %{HTTP:CF-Visitor} '"scheme":"http"'
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+Options -Indexes
+#End Really Simple Security
+
+# BEGIN WPSuperCache
+# Las directivas (líneas) entre «BEGIN WPSuperCache» y «END WPSuperCache» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+# END WPSuperCache
+# BEGIN WordPress
+# Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /linktic/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /linktic/index.php [L]
+</IfModule>
+
+# END WordPress

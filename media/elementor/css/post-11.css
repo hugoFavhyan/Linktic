@@ -1,0 +1,17 @@
+.elementor-11 .elementor-element.elementor-element-20369d7{--display:flex;--min-height:340px;--justify-content:flex-start;--gap:5px 5px;--row-gap:5px;--column-gap:5px;--margin-top:5px;--margin-bottom:5px;--margin-left:5px;--margin-right:5px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-widget-image .widget-image-caption{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );}.elementor-11 .elementor-element.elementor-element-21fa51f > .elementor-widget-container{margin:20px 0px 0px 0px;}.elementor-11 .elementor-element.elementor-element-21fa51f .elementor-heading-title{font-family:"Red Hat Display", Sans-serif;font-size:18px;font-weight:800;line-height:20px;color:var( --e-global-color-secondary );}.elementor-11 .elementor-element.elementor-element-6492419 > .elementor-widget-container{margin:13px 0px 0px 0px;}.elementor-11 .elementor-element.elementor-element-6492419 .elementor-heading-title{font-family:"Red Hat Display", Sans-serif;font-size:16px;font-weight:600;line-height:24px;color:#0194FF;}@media(max-width:767px){.elementor-11 .elementor-element.elementor-element-21fa51f{text-align:center;}.elementor-11 .elementor-element.elementor-element-21fa51f .elementor-heading-title{font-size:14px;}.elementor-11 .elementor-element.elementor-element-6492419{text-align:center;}.elementor-11 .elementor-element.elementor-element-6492419 .elementor-heading-title{font-size:14px;}}@media(min-width:768px){.elementor-11 .elementor-element.elementor-element-20369d7{--content-width:550px;}}/* Start custom CSS for heading, class: .elementor-element-21fa51f *//*.listing-title{
+    font-family: Red Hat Display;
+font-size: 20px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0.6000000238418579px;
+
+
+}
+@media (max-widdth: 768px){
+    .listing-title{
+font-size: 14px;
+line-height: 16px;
+
+
+    }
+}*//* End custom CSS */
